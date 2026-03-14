@@ -2,7 +2,7 @@ import { Col, Nav, Row, Spinner, Table } from "react-bootstrap"
 import Custombar from "./CustomBar"
 import CustomNav from "./CustomNav"
 import { useEffect, useState } from "react"
-import { getSales, getSalesToday } from "../API"
+import { getSalesToday } from "../API"
 
 const Reports = () => {
 
@@ -112,14 +112,14 @@ const Reports = () => {
                             }
                             <tr>
                                 {
-                                    salesToday.map(m => {
+                                    salesToday.map(m => (
                                         sales_today_total += m.total  
-                                    }                                   )
+                                    ))
                                 }
                                 {
-                                    salesToday.map(m => {
+                                    salesToday.map(m => (
                                         sales_today_qty += m.qty
-                                    }                                   )
+                                    ))
                                 }
                                 <td></td>
                                 <td></td>

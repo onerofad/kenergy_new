@@ -29,6 +29,11 @@ const ExpenseReport = () => {
             setExpenses(response.data)
         })
     }
+
+        expenses_today.map(e => (
+            expense_total += e.expenseamount  
+        ))
+    
     return(
         <>
          <Custombar link="/" link_name="Log out" />
@@ -100,11 +105,7 @@ const ExpenseReport = () => {
                                             ))
                                         }
                                         <tr>
-                                        {
-                                            expenses_today.map(e => {
-                                            expense_total += e.expenseamount  
-                                            })
-                                         }
+                                       
                                         
                                             <td></td>
                                             <td></td>

@@ -28,8 +28,8 @@ const PricePerKg = () => {
 
     const getAllPrices = () => {
         setTableLoading("border")
-        getPrices().get("/").
-        then(res => {
+        getPrices().get("/")
+        .then(res => {
             setTableLoading("")
             setPrices(res.data)
         })
