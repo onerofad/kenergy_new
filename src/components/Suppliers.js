@@ -65,8 +65,8 @@ const Suppliers = () => {
 
     const handleDelete = (id) => {
         setdeleteloading('border')
-        getSuppliers().delete(`/${id}/`).
-        then(() => {
+        getSuppliers().delete(`/${id}/`)
+        .then(() => {
             setdeleteloading('')
             getAllSuppliers()
             setmodalText('Supplier Deleted')

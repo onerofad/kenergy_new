@@ -4,9 +4,8 @@ import Custombar from "./CustomBar"
 import CustomNav from "./CustomNav"
 import { Button, Form, Modal, Spinner, Table } from "react-bootstrap"
 import { useEffect, useState } from "react"
-import { BiSolidError } from "react-icons/bi"
 import { getItems } from "../API"
-import { BsTrash, BsTrashFill } from "react-icons/bs"
+import { BsTrashFill } from "react-icons/bs"
 
 const Items = () => {
 
@@ -29,8 +28,8 @@ const Items = () => {
 
     const getAllItems = () => {
         setTableLoading("border")
-        getItems().get("/").
-        then(res => {
+        getItems().get("/")
+        .then(res => {
             setTableLoading("")
             setItems(res.data)
         })

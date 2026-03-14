@@ -8,7 +8,7 @@ import Custombar from "./CustomBar"
 import { Container, Spinner } from "react-bootstrap"
 import { Link, useNavigate } from "react-router"
 import { BiMessageError } from "react-icons/bi"
-import API, { getUsers } from "../API"
+import { getUsers } from "../API"
 
 const Home = ({mobile}) => {
 
@@ -48,7 +48,7 @@ const Home = ({mobile}) => {
         }else if(!user){
             setmodalText("Username is invalid")
             setShow(true)
-        }else if(user.password != password){
+        }else if(user.password !== password){
             setmodalText("Password is Invalid")
             setShow(true)
         }else{  

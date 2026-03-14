@@ -45,9 +45,9 @@ const Sales = () => {
     const [show, setShow] = useState(false)
     const handleClose = () => setShow(false)
 
-    const [modalText1, setmodalText1] = useState("")
+    //const [modalText1, setmodalText1] = useState("")
     const [show1, setShow1] = useState(false)
-    const handleClose1 = () => {
+   /* const handleClose1 = () => {
         //printContent()
         setShow1(false)
         setItem("")
@@ -55,7 +55,7 @@ const Sales = () => {
         setAmount(0)
         setQty(0)
         setTotal(0)
-    }
+    }*/
 
     const [prices, setPrices] = useState([])
 
@@ -115,13 +115,13 @@ const Sales = () => {
             .then(() => {
                 setLoading("")
                 getAllSales()
-                setmodalText1("Sales Complete")
+                //setmodalText1("Sales Complete")
                 setShow1(true) 
             })
         }
     }
 
-    function printContent() {
+   /* function printContent() {
         var contentToPrint = document.querySelector('.print-content');
         var printWindow = window.open('', '_blank');
         printWindow.document.write('<html><head><title>Print</title></head><body>');
@@ -129,7 +129,7 @@ const Sales = () => {
         printWindow.document.write('</body></html>');
         printWindow.document.close();
         printWindow.print();
-    }
+    }*/
 
     let price
 

@@ -85,7 +85,7 @@ const Inventory = ({mobile}) => {
 
     for(let number = 1; number <= no_pagination_items; number++){
         items.push(
-            <Pagination.Item onClick={() => handlePagination(number)} active={number == active}>
+            <Pagination.Item onClick={() => handlePagination(number)} active={number === active}>
                 {number}
             </Pagination.Item>
         )

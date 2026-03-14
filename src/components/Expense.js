@@ -65,8 +65,8 @@ const Expense = () => {
             setBtnLoading("border")
 
             let items = {expensename, expenseamount, expensestaff}
-            getExpense().post("/", items).
-            then(() => {
+            getExpense().post("/", items)
+            .then(() => {
                 getAllExpense()
                 setBtnLoading("")
                 setExpensename("")

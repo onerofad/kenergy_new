@@ -7,7 +7,6 @@ import { useEffect, useState } from "react"
 import Custombar from "./CustomBar"
 import { Container, Spinner } from "react-bootstrap"
 import { Link } from "react-router"
-import { BiMessageError } from "react-icons/bi"
 import { getUsers } from "../API"
 
 const Register = ({mobile}) => {
@@ -41,10 +40,10 @@ const Register = ({mobile}) => {
         
         const user = users.filter(u => u.username === username)[0]
         
-        if(username == "" || password == "" || cpassword == ""){
+        if(username === "" || password === "" || cpassword === ""){
             setmodalText("Please enter all Fields")
             setShow(true)
-        }else if(accesslevel == "0"){
+        }else if(accesslevel === "0"){
             setmodalText("Select access level")
             setShow(true)
         }else if(password !== cpassword){

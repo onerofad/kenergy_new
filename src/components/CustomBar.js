@@ -1,7 +1,5 @@
 import  Navbar from "react-bootstrap/Navbar"
-import  Nav from "react-bootstrap/Nav"
 import img from '../logo.svg'
-import { Container } from "react-bootstrap"
 import { BiSolidRegistered } from "react-icons/bi"
 
 
@@ -14,6 +12,7 @@ const Custombar = ({link, link_name}) => {
                     src={img}
                     width='50'
                     height='50'
+                    alt=""
                 />
                     KNERGY
             </Navbar.Brand>

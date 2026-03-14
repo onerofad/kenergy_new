@@ -6,7 +6,7 @@ import { getSales, getSalesToday } from "../API"
 
 const Reports = () => {
 
-    const [sales, setSales] = useState([])
+    //const [sales, setSales] = useState([])
     const [salesToday, setSalesToday] = useState([])
 
     const [table_loading, setTableLoading] = useState("")
@@ -15,16 +15,16 @@ const Reports = () => {
     let sales_today_qty = 0
 
     useEffect(() => {
-        getAllSales()
+        //getAllSales()
         getAllSalesToday()
     },[])
 
     let id = 0
 
-    const getAllSales = () => {
+    /*const getAllSales = () => {
         getSales().get("/").then(response => setSales(response.data))
         .catch(error => console.log("An error has occurred" + error))
-    }
+    }*/
 
      const getAllSalesToday = () => {
         setTableLoading("border")

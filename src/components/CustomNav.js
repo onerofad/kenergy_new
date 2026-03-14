@@ -1,12 +1,12 @@
 import Nav  from "react-bootstrap/Nav"
-import { BiMoney, BiSolidLogOut, BiSolidUserVoice } from "react-icons/bi"
-import { BsBasket, BsBook, BsCashCoin, BsFileExcel, BsFillSignIntersectionYFill, BsMicrosoftTeams } from "react-icons/bs"
+import { BiMoney, BiSolidUserVoice } from "react-icons/bi"
+import { BsBasket, BsBook, BsCashCoin, BsFileExcel, BsFillSignIntersectionYFill } from "react-icons/bs"
 const CustomNav = () => {
 
     return(
         <Nav style={{height: 540, backgroundColor: '#000', paddingTop: 60, paddingLeft: 15, paddingRight: 15}} variant="underline" className="justify-content-center flex-column">
         {
-            sessionStorage.getItem("accesslevel") == "1" ?
+            sessionStorage.getItem("accesslevel") === "1" ?
             <Nav.Item as='h6'>
                 <Nav.Link className="text-white" href="/price" >
                     <BiMoney size={24} color="#fff" />

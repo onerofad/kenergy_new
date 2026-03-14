@@ -16,7 +16,6 @@ const PeriodicExpenseReport = () => {
      const [datefrom, setdateFrom] = useState(null)
      const [dateto, setdateTo] = useState(null)
     const [search_result, setSearchResult] = useState([])
-    const [qty, setQty] = useState(0)
     const [total, setTotal] = useState(0)
     
         let id=0

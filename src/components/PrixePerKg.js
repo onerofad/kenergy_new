@@ -4,7 +4,7 @@ import Custombar from "./CustomBar"
 import CustomNav from "./CustomNav"
 import { Button, Form, Modal, Spinner, Table } from "react-bootstrap"
 import { useEffect, useState } from "react"
-import { getItems, getPrices } from "../API"
+import { getPrices } from "../API"
 import { BsTrashFill } from "react-icons/bs"
 
 const PricePerKg = () => {
