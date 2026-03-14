@@ -52,10 +52,13 @@ const PeriodicExpenseReport = () => {
                             </tr>
                     )
                 }))
-                search_expenses.map(t => {
+                search_expenses.map(t => (
                     expense_total += t.expenseamount
+                ))
+                search_expenses.map(t => (
+
                     setTotal(expense_total)
-                })
+                ))
                 setTableLoading("")
     }
     return(

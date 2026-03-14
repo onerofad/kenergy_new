@@ -170,20 +170,23 @@ const Inventory = ({mobile}) => {
         }
     }
 
-     {
-        inventories.map(m => 
-        {
+     
+        inventories.map(m => (
             total_kg += m.qty
-            total_cost += m.selling * m.qty
-        })
-    }
+        ))
 
-    {
-        sales.map(s => {
+        inventories.map(m => (
+            total_cost += m.selling * m.qty
+        ))
+    
+        sales.map(s => (
             total_kg_sales += s.qty
+        ))
+
+        sales.map(s => (
             total_amount_sales += s.total
-        })
-    }
+        ))
+    
     return(
         <>
         <Custombar link={'/'} link_name={'Log out'} />
