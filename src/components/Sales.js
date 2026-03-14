@@ -136,6 +136,15 @@ const Sales = () => {
     prices.map(p => (
         price = p.price
     ))
+
+    
+    inventories.map(m => (
+        total_kg += m.qty
+    ))
+                            
+    sales.map(s => (
+        total_kg_sales += s.qty
+    ))
     
     return(
         <>
@@ -149,16 +158,7 @@ const Sales = () => {
                     <h4>
                         Make Sales
                         <span style={{float: 'right'}}>
-                            {
-                                inventories.map(m => (
-                                    total_kg += m.qty
-                                ))
-                            }
-                            {
-                                sales.map(s => (
-                                    total_kg_sales += s.qty
-                                ))
-                            }
+                            
                             Total Left (Kg): {total_kg - total_kg_sales}
                         </span>
                     </h4>
